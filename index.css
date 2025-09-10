@@ -140,6 +140,7 @@ a:hover {
 
 .overlay-image {
     max-width: 80em;
+    min-width: 80em;
     /* make banner image bigger */
     height: auto;
     display: block;
