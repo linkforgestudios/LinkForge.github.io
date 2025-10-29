@@ -33,49 +33,96 @@ hr {
     width: auto;
 }
 
-#nav-bar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    padding-left: 5em;
-    padding-right: 5em;
+/* ---------------- Navbar Fixes ---------------- */
+.navbar {
+    position: relative;
+    z-index: 1000;
+    /* higher than other content like banners */
+    height: 80px;
+    background-color: #181818;
 }
 
-#nav-bar-items {
-    display: inline;
+.navbar-brand {
+    position: relative;
+    z-index: 1;
+    /* below dropdown */
 }
 
-#nav-bar-text {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    padding: 0.80em;
-    font-size: 1.1em;
+.navbar-brand img {
+    position: absolute;
+    pointer-events: none;
+    /* don't block clicks */
+    z-index: 1;
+    /* ensure images are below dropdown */
 }
 
-#nav-bar-text:hover:not(.active) {
-    background-color: #eac115
+.navbar-collapse {
+    overflow: visible !important;
 }
 
-#game-card-title {
-    margin-bottom: 1em;
-    padding: 0.80em;
+
+.navbar-dark .dropdown-menu {
+    background-color: #181818 !important;
+    border: none;
+    z-index: 2000 !important;
+}
+
+.navbar-dark .dropdown-item {
+    color: #fff;
+}
+
+.navbar-dark .dropdown-item:hover,
+.navbar-dark .dropdown-item:focus {
+    background-color: #333;
+    color: #fff;
+}
+
+/* ---------------- Collapsed menu items ---------------- */
+@media (max-width: 1199px) {
+    .navbar-collapse .nav-item {
+        border: 1px solid #333;
+        border-radius: 5px;
+        margin: 0.25rem 0;
+        text-align: center;
+    }
+
+    .navbar-collapse .nav-link {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        outline: 1px solid;
+        /* Set outline width and style */
+        outline-color: #eac115;
+        background-color: #181818;
+    }
+}
+
+/* ---------------- General Navbar Items ---------------- */
+.nav-item {
+    color: #fff;
 }
 
 .active {
     color: #eac115 !important;
 }
 
-a:link {
-    color: #FFFFFF;
-}
-
-a:visited {
-    color: #FFFFFF;
-}
-
+/* ---------------- Nav Links ---------------- */
+a:link,
+a:visited,
 a:hover {
     color: #FFFFFF;
+    text-decoration: none;
+}
+
+#nav-bar-text:hover:not(.active) {
+    background-color: #eac115;
+}
+
+/* ---------------- Other Sections ---------------- */
+#game-card-title {
+    margin-bottom: 1em;
+    padding: 0.80em;
 }
 
 #featuredGameBanner {
@@ -90,69 +137,63 @@ a:hover {
 .center {
     display: inline-block;
     position: relative;
-
 }
 
+/* ---------------- Video Banner Fixes ---------------- */
 .video-banner {
     position: relative;
-    height: 50vh;
-    /* full screen */
     width: 100%;
+    height: 50vh;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
 }
 
-.video-banner .video-bg {
+/* Video fills banner */
+.video-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    z-index: -1;
-    /* keeps video behind everything */
+    z-index: 1;
 }
 
+/* Banner content overlays video */
 .banner-content {
     position: absolute;
-    top: 50%;
-    width: 50%;
+    top: 0;
     left: 0;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    text-align: left;
-    box-sizing: border-box;
-    padding: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
 }
 
-.banner-content .overlay-image {
-    height: 100vh;
-}
-
-.image-container {
-    position: relative;
-    /* establishes a local stacking context */
-}
-
+/* Image positioned absolutely inside content */
 .overlay-image {
-    max-width: 80em;
-    min-width: 80em;
-    /* make banner image bigger */
-    height: auto;
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 200px;
+    z-index: 3;
 }
 
 .text-overlay {
     position: absolute;
-    /* positions text on top of image */
-    top: 50%;
-    left: 50%;
-    transform: translate(15%, -50%);
-    /* center over image */
-    color: white;
-    text-align: center;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 200px;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* or center if you want it centered */
+    padding: 1rem;
+
+    /* Make sure text scales gracefully */
+    text-align: left;
 }
