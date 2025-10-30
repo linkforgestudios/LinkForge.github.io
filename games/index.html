@@ -16,22 +16,32 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <div style="background-color: #181818 ">
-        <ul id="nav-bar" style="margin-top:2em; margin-bottom:3em; padding-top:1.5em; padding-bottom:1.5em;">
-            <li id="nav-bar-items" style="float:left;">
-                <div style="margin-top:-3em">
-                    <img src="/Images/Company Logo/Logo2_GoldSilver_Circle.png" height="120em">
-                </div>
-            </li>
-            <div id="nav-bar-items" style="margin-top:-0.7em; float:left;">
-                <img src="/Images/Company Logo/Logo2_Text.png" height="50em">
+    <nav class="navbar navbar-expand-xl navbar-dark"
+        style="height: 80px; margin-top:2em; margin-bottom:3em; background-color: #181818;">
+        <div class="container-fluid position-relative">
+            <a class="navbar-brand position-relative" href="/" style="height: 80px;">
+                <!-- Hanging images -->
+                <img src="/Images/Company Logo/Logo2_GoldSilver_Circle.png" class="logo-image">
+                <img src="/Images/Company Logo/Logo2_Text.png" class="logo-text">
+            </a>
+
+            <!-- Hamburger toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/company/">COMPANY</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/games/">GAMES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/careers/">CAREERS</a></li>
+                </ul>
             </div>
-            <li id="nav-bar-items"><a href="/" id="nav-bar-text">HOME</a></li>
-            <li id="nav-bar-items"><a href="/company/" id="nav-bar-text">COMPANY</a></li>
-            <li id="nav-bar-items"><a href="/games/" id="nav-bar-text" class="active">GAMES</a></li>
-            <li id="nav-bar-items"><a href="/careers/" id="nav-bar-text">CAREERS</a></li>
-        </ul>
-    </div>
+        </div>
+    </nav>
     <!-- <div class="container"
         style="background-color: #302e2e; border-style: solid; border-color: #000000; border-radius: 1%; border-width: 1px; margin-top: 2em;"> -->
 
