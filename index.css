@@ -121,12 +121,12 @@ hr {
         height: 50px;
     }
 
-    .navbar-toggler {
+    /* .navbar-toggler {
         position: absolute;
         top: 50%;
         right: 1rem;
         transform: translateY(-50%);
-    }
+    } */
 }
 
 /* ---------------- General Navbar Items ---------------- */
