@@ -28,12 +28,22 @@ hr {
         0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
-#logo {
-    height: 20em;
-    width: auto;
+/* ---------------- Navbar Logo ---------------- */
+.logo-image {
+    position: absolute;
+    left: 80px;
+    top: -20px;
+    height: 120px;
 }
 
-/* ---------------- Navbar Fixes ---------------- */
+.logo-text {
+    position: absolute;
+    left: 200px;
+    top: 15px;
+    height: 50px;
+}
+
+/* ---------------- Navbar Menu ---------------- */
 .navbar {
     position: relative;
     z-index: 1000;
@@ -95,6 +105,27 @@ hr {
         /* Set outline width and style */
         outline-color: #eac115;
         background-color: #181818;
+    }
+
+    .logo-image {
+        position: absolute;
+        left: 0px;
+        top: -27px;
+        height: 120px;
+    }
+
+    .logo-text {
+        position: absolute;
+        left: 120px;
+        top: 8px;
+        height: 50px;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
     }
 }
 
