@@ -121,6 +121,19 @@ hr {
         height: 50px;
     }
 
+    .card-fixed {
+        min-height: 22rem;
+        transition: all 0.3s ease;
+    }
+
+    /* Optional — makes cards expand naturally on smaller screens */
+    @media (max-width: 767px) {
+        .card-fixed {
+            width: 100%;
+        }
+    }
+
+
     /* .navbar-toggler {
         position: absolute;
         top: 50%;
