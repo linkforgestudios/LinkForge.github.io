@@ -28,6 +28,9 @@ hr {
         0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
+main {
+    flex: 1;
+}
 
 /* ---------------- Navbar Logo ---------------- */
 .logo-image {
@@ -177,6 +180,17 @@ a:hover {
 }
 
 /* ---------------- Footer ---------------- */
+
+/* Footer styling */
+footer {
+    background-color: #181818;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: auto;
+    /* This pushes it to the bottom */
+}
+
 /* Custom modal colors */
 .custom-modal {
     background-color: #181818;
@@ -233,7 +247,7 @@ a:hover {
 }
 
 .about-section hr {
-    width: 80px;
+    width: 120px;
     height: 3px;
     background-color: #eac115;
     border: none;
