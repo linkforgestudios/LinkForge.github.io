@@ -305,6 +305,12 @@ footer {
         padding-bottom: 1em;
     }
 
+    #featuredGameBanner .ratio {
+        aspect-ratio: 16/9;
+        /* taller ratio for mobile */
+        max-height: 250px;
+    }
+
     /* Make cards full width on mobile */
     .card {
         width: 90% !important;
