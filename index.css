@@ -272,7 +272,6 @@ footer {
 /* Card styling */
 .card {
     border-radius: 10px;
-    background-color: #302e2e !important;
     border: 1px solid #444;
     margin: 1em auto;
     transition: transform 0.2s ease-in-out;
@@ -291,21 +290,19 @@ footer {
 /* ===== Mobile Adjustments ===== */
 @media (max-width: 768px) {
 
-    /* Reduce banner margins */
-    #featuredGameBanner {
-        margin: 1em;
+    #featuredGameBanner img {
+        height: 250px !important;
+        object-fit: cover;
     }
 
-    /* Stack buttons nicely under image */
-    #featuredGameBanner .card-img-overlay {
-        flex-direction: column;
-        justify-content: flex-end;
-        padding-bottom: 3em;
-    }
-
-    #featuredGameBanner .card-img-overlay a {
+    #featuredGameBanner .btn {
         width: 80%;
-        max-width: 300px;
+        font-size: 0.9rem;
+        padding: 0.6em 1em;
+    }
+
+    #featuredGameBanner .card-img-overlay {
+        padding-bottom: 1em;
     }
 
     /* Make cards full width on mobile */
