@@ -1,10 +1,15 @@
 html {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* ensures full viewport height */
     background: #e9e8db;
-    background-size: cover;
     font-family: Lato;
     color: white;
     text-align: center;
@@ -38,6 +43,7 @@ main {
     left: 80px;
     top: -20px;
     height: 120px;
+    z-index: 1;
 }
 
 .logo-text {
@@ -120,6 +126,7 @@ main {
         left: 0px;
         top: -27px;
         height: 120px;
+        z-index: 1;
     }
 
     .logo-text {
