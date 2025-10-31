@@ -228,18 +228,95 @@ footer {
     padding: 0.80em;
 }
 
+/* ===== Featured Game Banner ===== */
 #featuredGameBanner {
-    margin-top: 1.5em;
-    background-color: #302e2e;
-    border-style: solid;
-    border-color: #000000;
-    border-radius: 1%;
-    border-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
+/* Make banner image responsive */
+#featuredGameBanner img.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Center overlay buttons */
+#featuredGameBanner .card-img-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#featuredGameBanner .card-img-overlay a {
+    margin: 0.5em;
+    white-space: nowrap;
+}
+
+/* ===== Game Cards Section ===== */
 .center {
-    display: inline-block;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Card styling */
+.card {
+    border-radius: 10px;
+    background-color: #302e2e !important;
+    border: 1px solid #444;
+    margin: 1em auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+
+/* ===== Mobile Adjustments ===== */
+@media (max-width: 768px) {
+
+    /* Reduce banner margins */
+    #featuredGameBanner {
+        margin: 1em;
+    }
+
+    /* Stack buttons nicely under image */
+    #featuredGameBanner .card-img-overlay {
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 3em;
+    }
+
+    #featuredGameBanner .card-img-overlay a {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    /* Make cards full width on mobile */
+    .card {
+        width: 90% !important;
+    }
+
+    /* Center navbar items */
+    .navbar-nav {
+        text-align: center;
+    }
 }
 
 /* ---------------- Company Summary ---------------- */
