@@ -87,6 +87,167 @@
             </div>
         </div>
     </div>
+
+    <footer style="background-color: #181818; text-align: center; padding: 20px;">
+        <p>&copy; LinkForge Studios 2025. All rights reserved.</p>
+        <p>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a> |
+            <a href="#" data-bs-toggle="modal" data-bs-target="#tosModal">Terms of Service</a> |
+            <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</a>
+        </p>
+        <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content custom-modal">
+                    <div class="modal-header">
+                        <h5 class="modal-title w-100 text-center" id="privacyModalLabel">Privacy Policy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body text-start">
+                        <p>Your privacy is important to us. This Privacy Policy explains what information we collect and
+                            how we use it.</p>
+                        <h6>1. Information We Collect</h6>
+                        <p>We only collect information that you voluntarily provide through our contact form, including
+                            your name, email address, and message.</p>
+                        <h6>2. How We Use Your Information</h6>
+                        <p>The information you provide is used solely to respond to your inquiries. We do not share,
+                            sell, or rent your information.</p>
+                        <h6>3. Cookies and Tracking</h6>
+                        <p>We do not use cookies or tracking technologies to collect personal information.</p>
+                        <h6>4. Data Security</h6>
+                        <p>We take reasonable measures to protect your information, but no method of transmission over
+                            the Internet is completely secure.</p>
+                        <h6>5. Third-Party Services</h6>
+                        <p>We may use third-party services to deliver your messages securely.</p>
+                        <h6>6. Changes to This Policy</h6>
+                        <p>We may update this Privacy Policy from time to time. The latest version will always be
+                            available here.</p>
+                        <h6>7. Contact Us</h6>
+                        <p>If you have questions about this Privacy Policy, please contact us through our website
+                            contact form.</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Terms of Service Modal -->
+        <div class="modal fade" id="tosModal" tabindex="-1" aria-labelledby="tosModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content custom-modal">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title w-100 text-center" id="tosModalLabel">Terms of Service</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body text-start">
+                        <p>Welcome to LinkForge Studios! By using our website, you agree to the following terms:</p>
+
+                        <h6>1. Use of Website</h6>
+                        <p>You may use this website for lawful purposes only. You agree not to use the site in any way
+                            that could damage, disable, or interfere with the website's functionality.</p>
+
+                        <h6>2. Contact Form</h6>
+                        <p>If you submit a message through our contact form, the information you provide (name, email,
+                            message) will be used solely to respond to your inquiry. By submitting your information, you
+                            consent to this use.</p>
+
+                        <h6>3. Intellectual Property</h6>
+                        <p>All content on this website, including text, images, logos, and videos, is the property of
+                            LinkForge Studios unless otherwise stated. You may not copy, reproduce, or distribute any
+                            content without our written permission.</p>
+
+                        <h6>4. Links to Third-Party Sites</h6>
+                        <p>Our website may include links to third-party websites. We are not responsible for the
+                            content, privacy policies, or practices of these sites.</p>
+
+                        <h6>5. Limitation of Liability</h6>
+                        <p>We strive to provide accurate information on this website, but we do not guarantee it is
+                            error-free. LinkForge Studios is not liable for any damages arising from the use of this
+                            site.</p>
+
+                        <h6>6. Changes to Terms</h6>
+                        <p>We may update these Terms of Service at any time. The latest version will always be available
+                            on this page. Continued use of the site constitutes acceptance of the updated terms.</p>
+
+                        <h6>7. Contact</h6>
+                        <p>If you have questions about these terms, please contact us through our website contact form.
+                        </p>
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background-color: #181818; color: white; border: 1px solid white;">
+                    <div class="modal-header" style="border-bottom: 1px solid white;">
+                        <h5 class="modal-title" id="contactModalLabel" style="color: white;">Contact Us</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form id="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="col-form-label">Name:</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message" name="message" rows="4"
+                                    placeholder="Your message..." required></textarea>
+                            </div>
+                            <hr style="padding-top: 5px; padding-bottom: 5px;">
+                            <button type="submit" class="btn w-100"
+                                style="background-color: white; color: #181818; font-weight: bold;">Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- EmailJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script>
+            (function () {
+                emailjs.init("Cw4Qpb0ldbpFaKqfO"); // Replace with your public key
+            })();
+
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                emailjs.sendForm("service_pevr3w7", "template_z7wcp88", this)
+                    .then(() => {
+                        alert("✅ Your message has been sent successfully!");
+                        this.reset();
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+                        modal.hide();
+                    })
+                    .catch(error => {
+                        console.error("EmailJS error:", error);
+                        alert("❌ There was an issue sending your message. Please try again.");
+                    });
+            });
+        </script>
+    </footer>
 </body>
 
 </html>
