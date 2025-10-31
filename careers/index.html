@@ -111,72 +111,77 @@
 
   <!-- Main Content -->
   <main>
-    <div class="container text-center" style="padding-top: 2em; padding-bottom: 2em;">
-      <div class="row justify-content-center g-4" style="color:#302e2e;">
-        <div class="container-fluid mt-5 px-3">
-          <div class="row justify-content-center">
-            <div class="col-lg-8" id="job-listings">
-              <div class="col-12 col-sm-10 col-md-6 col-lg-4">
-                <div class="card job-card text-white mb-4 h-100 card-fixed">
+    <div class="container text-center py-5" style="color: #302e2e;">
+      <div class="row justify-content-center g-4">
 
-                  <!-- Header -->
-                  <div class="card-header d-flex justify-content-between align-items-center">
-                    <span class="badge bg-warning text-dark">Volunteer</span>
-                    <span class="badge bg-warning text-dark">Remote</span>
-                    <h5 class="card-title mb-1">Junior Technical Design Associate</h5>
-                    <p class="mb-1"><strong>Department:</strong> Software Engineering</p>
-                    <p class="mb-2"><strong>Job Id:</strong> Req-00012169</p>
-                  </div>
+        <!-- Job 1 -->
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+          <div class="card job-card h-100 card-fixed">
 
-                  <!-- Body -->
-                  <div class="card-body text-dark">
-                    <p class="card-text">
-                      We're looking for a passionate and creative student to assist our team in shaping
-                      gameplay systems, mechanics, and level design concepts. As a Junior Technical Design Associate,
-                      you'll
-                      collaborate with artists and developers to prototype ideas, test features, and help bring our game
-                      worlds to life. This is a volunteer learning opportunity—ideal for high school students eager to
-                      gain
-                      hands-on experience in both the artistic and technical sides of game development.
-                    </p>
-
-                    <div class="text-center mt-3">
-                      <a class="btn btn-dark text-white px-4" style="pointer-events: none;">Closed</a>
-                    </div>
-                  </div>
+            <!-- Header with badges + job info -->
+            <div class="card-header text-dark" style="background-color: #212529; color: white;">
+              <div class="d-flex justify-content-start flex-column gap-1">
+                <div class="d-flex justify-content-start gap-2">
+                  <span class="badge bg-warning text-dark">Volunteer</span>
+                  <span class="badge bg-warning text-dark">Remote</span>
                 </div>
+                <h5 class="card-title mb-0">Junior Technical Design Associate</h5>
+                <p class="mb-0"><strong>Department:</strong> Software Engineering</p>
+                <p class="mb-0"><strong>Job Id:</strong> Req-00012169</p>
               </div>
+            </div>
 
-
-              <!-- Job 2 -->
-              <div class="card mb-4 shadow-sm job-card" data-location="los angeles" style="background-color: #302e2e ">
-                <div class="card-body" style="color: white ">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="badge bg-warning text-dark">Full-Time</span>
-                    <span class="badge bg-warning text-dark">Los Angeles, CA</span>
-                  </div>
-                  <p></p>
-                  <h5 class="card-title mb-0">Software Engineer Intern - 2025</h5>
-                  <p class="card-text">Software Engineering Department</p>
-                  <p class="card-text">Job Id: Req-00012429</p>
-                  <hr>
-                  <p class="card-text">
-                    We're seeking a Software Engineer Intern to join our development team. In
-                    this role, you'll collaborate closely with engineers and designers to build, test, and optimize core
-                    gameplay systems and tools. You'll contribute directly to active projects, writing clean and
-                    efficient
-                    code while learning best practices in software architecture and game development. This internship is
-                    ideal for students currently pursuing a degree in computer science or a related field who want
-                    real-world experience in a collaborative, fast-paced game studio environment.</p>
-
-                  <a class="btn btn-light text-dark" style="pointer-events: none;">Closed</a>
-                </div>
+            <!-- Body -->
+            <div class="card-body text-dark">
+              <p class="card-text">
+                We're looking for a passionate and creative student to assist our team in shaping gameplay systems,
+                mechanics, and level design concepts. As a Junior Technical Design Associate, you'll collaborate with
+                artists and developers to prototype ideas, test features, and help bring our game worlds to life. This
+                is a volunteer learning opportunity—ideal for high school students eager to gain hands-on experience in
+                both the artistic and technical sides of game development.
+              </p>
+              <div class="text-center mt-3">
+                <a class="btn btn-dark text-white px-4" style="pointer-events: none;">Closed</a>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Job 2 -->
+        <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+          <div class="card job-card h-100 card-fixed">
+
+            <!-- Header with badges only -->
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <span class="badge bg-warning text-dark">Full-Time</span>
+              <span class="badge bg-warning text-dark">Los Angeles, CA</span>
+            </div>
+
+            <!-- Body -->
+            <div class="card-body text-dark">
+              <h5 class="card-title mb-1">Software Engineer Intern - 2025</h5>
+              <p class="mb-1"><strong>Department:</strong> Software Engineering</p>
+              <p class="mb-2"><strong>Job Id:</strong> Req-00012429</p>
+              <hr>
+              <p class="card-text">
+                We're seeking a Software Engineer Intern to join our development team. In
+                this role, you'll collaborate closely with engineers and designers to build, test, and optimize core
+                gameplay systems and tools. You'll contribute directly to active projects, writing clean and efficient
+                code while learning best practices in software architecture and game development. This internship is
+                ideal for students currently pursuing a degree in computer science or a related field who want
+                real-world experience in a collaborative, fast-paced game studio environment.
+              </p>
+              <div class="text-center mt-3">
+                <a class="btn btn-dark text-white px-4" style="pointer-events: none;">Closed</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </main>
+
 
   <script>
     const checkboxes = document.querySelectorAll('.filter-checkbox');
