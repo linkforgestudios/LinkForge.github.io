@@ -153,14 +153,6 @@ hr {
             max-width: 100% !important;
         }
     }
-
-
-    /* .navbar-toggler {
-        position: absolute;
-        top: 50%;
-        right: 1rem;
-        transform: translateY(-50%);
-    } */
 }
 
 /* ---------------- General Navbar Items ---------------- */
@@ -224,6 +216,53 @@ a:hover {
     display: inline-block;
     position: relative;
 }
+
+/* ---------------- Company Summary ---------------- */
+
+.about-section {
+    text-align: left;
+    color: #302e2e;
+    padding: 2rem 5%;
+}
+
+.about-section h2 {
+    color: #302e2e;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.about-section hr {
+    width: 80px;
+    height: 3px;
+    background-color: #eac115;
+    border: none;
+    margin: 0.5rem auto 2rem;
+    border-radius: 3px;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    column-count: 2;
+    column-gap: 2rem;
+    text-align: justify;
+}
+
+/* Responsive design — 1 column on mobile */
+@media (max-width: 768px) {
+    .about-text {
+        column-count: 1;
+        padding: 0 1rem;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .about-section {
+        padding: 1.5rem 1rem;
+    }
+}
+
 
 /* ---------------- Video Banner Fixes ---------------- */
 .video-banner {
