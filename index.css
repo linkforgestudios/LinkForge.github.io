@@ -288,6 +288,24 @@ footer {
     }
 }
 
+#topbar {
+    width: 100%;
+    border-bottom: 1px solid #444;
+    /* optional separator */
+    flex-wrap: wrap;
+    /* allows items to wrap on smaller screens */
+}
+
+/* ---------------- Careers Page ---------------- */
+
+#topbar .form-check-inline {
+    margin-right: 1.5rem;
+    /* spacing between checkboxes */
+}
+
+#topbar .form-check-label {
+    color: #fff;
+}
 
 /* ---------------- Video Banner Fixes ---------------- */
 .video-banner {
