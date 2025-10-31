@@ -74,6 +74,10 @@ main {
     overflow: visible !important;
 }
 
+.navbar .dropdown-menu {
+    position: absolute !important;
+    z-index: 3000 !important;
+}
 
 .navbar-dark .dropdown-menu {
     background-color: #181818 !important;
