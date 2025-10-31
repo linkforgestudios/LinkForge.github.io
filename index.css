@@ -298,7 +298,7 @@ footer {
     #featuredGameBanner .btn {
         width: 80%;
         font-size: 0.9rem;
-        padding: 0.6em 1em;
+        /* padding: 0.6em 1em; */
     }
 
     #featuredGameBanner .card-img-overlay {
