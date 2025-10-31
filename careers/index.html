@@ -73,25 +73,39 @@
     </div>
   </nav>
 
-  <div id="topbar" class="d-flex flex-wrap justify-content-center align-items-center bg-dark py-2">
-    <div class="me-3 text-white flex-shrink-1">
+  <div id="topbar" class="d-flex justify-content-center align-items-center bg-dark py-2">
+
+    <!-- Label -->
+    <div class="me-3 text-white d-none d-sm-block">
       <strong>Locations:</strong>
     </div>
 
-    <div class="form-check form-check-inline text-white flex-shrink-1">
-      <input class="form-check-input filter-checkbox" type="checkbox" value="remote" id="remoteCheck">
-      <label class="form-check-label" for="remoteCheck">Remote</label>
+    <!-- Inline checkboxes for larger screens -->
+    <div class="d-none d-sm-flex">
+      <div class="form-check form-check-inline text-white">
+        <input class="form-check-input filter-checkbox" type="checkbox" value="remote" id="remoteCheck">
+        <label class="form-check-label" for="remoteCheck">Remote</label>
+      </div>
+      <div class="form-check form-check-inline text-white">
+        <input class="form-check-input filter-checkbox" type="checkbox" value="los angeles" id="laCheck">
+        <label class="form-check-label" for="laCheck">Los Angeles, CA</label>
+      </div>
+      <div class="form-check form-check-inline text-white">
+        <input class="form-check-input filter-checkbox" type="checkbox" value="reston" id="restonCheck">
+        <label class="form-check-label" for="restonCheck">Reston, VA</label>
+      </div>
     </div>
 
-    <div class="form-check form-check-inline text-white flex-shrink-1">
-      <input class="form-check-input filter-checkbox" type="checkbox" value="los angeles" id="laCheck">
-      <label class="form-check-label" for="laCheck">Los Angeles, CA</label>
+    <!-- Dropdown for mobile screens -->
+    <div class="d-sm-none">
+      <select class="form-select filter-dropdown" aria-label="Select Location">
+        <option value="" selected>All Locations</option>
+        <option value="remote">Remote</option>
+        <option value="los angeles">Los Angeles, CA</option>
+        <option value="reston">Reston, VA</option>
+      </select>
     </div>
 
-    <div class="form-check form-check-inline text-white flex-shrink-1">
-      <input class="form-check-input filter-checkbox" type="checkbox" value="reston" id="restonCheck">
-      <label class="form-check-label" for="restonCheck">Reston, VA</label>
-    </div>
   </div>
 
   <!-- Main Content -->
@@ -168,6 +182,19 @@
             card.classList.add('hidden');
           }
         });
+      });
+    });
+
+    const dropdown = document.querySelector('.filter-dropdown');
+
+    dropdown.addEventListener('change', () => {
+      const selected = dropdown.value.toLowerCase();
+      jobCards.forEach(card => {
+        if (!selected || card.dataset.location.toLowerCase().includes(selected)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
       });
     });
   </script>

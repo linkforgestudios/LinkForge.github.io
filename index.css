@@ -291,9 +291,8 @@ footer {
 #topbar {
     width: 100%;
     border-bottom: 1px solid #444;
-    /* optional separator */
     flex-wrap: wrap;
-    /* allows items to wrap on smaller screens */
+    gap: 0.5rem;
 }
 
 /* ---------------- Careers Page ---------------- */
