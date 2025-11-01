@@ -382,24 +382,22 @@ footer {
 
 .card-header.job-header {
     display: block !important;
-    /* treat as block so it expands */
+    /* natural height */
     padding: 1rem !important;
-    /* spacing inside header */
     box-sizing: border-box;
     height: auto !important;
-    /* allow height to grow */
 }
 
-/* Badge row */
+/* Badge row: left/right alignment, wrap on small screens */
 .card-header.job-header .badge-row {
     display: flex;
+    justify-content: space-between;
+    /* left/right alignment */
     flex-wrap: wrap;
-    /* badges wrap on smaller screens */
-    gap: 0.5rem;
+    /* wrap if needed on small screens */
     margin-bottom: 0.5rem;
 }
 
-/* Title and paragraphs */
 .card-header.job-header h5,
 .card-header.job-header p {
     display: block;
@@ -407,6 +405,7 @@ footer {
     white-space: normal;
     /* allow wrapping */
 }
+
 
 
 
