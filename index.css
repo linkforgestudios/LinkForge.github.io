@@ -380,14 +380,14 @@ footer {
     color: #fff;
 }
 
-/* Ensure header expands and stacks content vertically */
 .card-header.job-header {
     display: block !important;
-    /* treat as block, not flex */
+    /* treat as block so it expands */
     padding: 1rem !important;
-    /* ensure proper spacing */
+    /* spacing inside header */
     box-sizing: border-box;
-    /* include padding in width */
+    height: auto !important;
+    /* allow height to grow */
 }
 
 /* Badge row */
@@ -403,12 +403,11 @@ footer {
 .card-header.job-header h5,
 .card-header.job-header p {
     display: block;
-    /* make sure they stack vertically */
     margin: 0.15rem 0;
-    /* small spacing between lines */
     white-space: normal;
     /* allow wrapping */
 }
+
 
 
 /* ---------------- Video Banner Fixes ---------------- */
