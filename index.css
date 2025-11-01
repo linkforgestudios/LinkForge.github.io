@@ -380,20 +380,36 @@ footer {
     color: #fff;
 }
 
-.card-header.header-flex {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: wrap;
-    align-items: flex-start !important;
-    gap: 0.25rem;
+/* Ensure header expands and stacks content vertically */
+.card-header.job-header {
+    display: block !important;
+    /* treat as block, not flex */
+    padding: 1rem !important;
+    /* ensure proper spacing */
+    box-sizing: border-box;
+    /* include padding in width */
 }
 
-/* Badge row wraps on small screens */
-.card-header .badge-row {
+/* Badge row */
+.card-header.job-header .badge-row {
     display: flex;
     flex-wrap: wrap;
+    /* badges wrap on smaller screens */
     gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
+
+/* Title and paragraphs */
+.card-header.job-header h5,
+.card-header.job-header p {
+    display: block;
+    /* make sure they stack vertically */
+    margin: 0.15rem 0;
+    /* small spacing between lines */
+    white-space: normal;
+    /* allow wrapping */
+}
+
 
 /* ---------------- Video Banner Fixes ---------------- */
 .video-banner {
