@@ -78,6 +78,7 @@ main {
 
 .navbar-collapse {
     overflow: visible !important;
+    margin-left: 7em;
 }
 
 .navbar .dropdown-menu {
@@ -101,18 +102,6 @@ main {
     color: #fff;
 }
 
-/* Ensure dropdown toggle button and outline are above logos */
-.navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active {
-    position: relative;
-    z-index: 10;
-    /* higher than logo */
-    outline: 2px solid #eac115 !important;
-    /* your yellow border */
-    outline-offset: 2px;
-}
-
 /* ---------------- Collapsed menu items ---------------- */
 @media (max-width: 1199px) {
     .navbar-collapse .nav-item {
@@ -120,6 +109,8 @@ main {
         border-radius: 5px;
         margin: 0.25rem 0;
         text-align: center;
+        z-index: 10;
+        margin-left: 7em;
     }
 
     .navbar-collapse .nav-link {
@@ -131,6 +122,7 @@ main {
         /* Set outline width and style */
         outline-color: #eac115;
         background-color: #181818;
+        z-index: 10;
     }
 
     .logo-image {
@@ -325,6 +317,8 @@ footer {
     /* Center navbar items */
     .navbar-nav {
         text-align: center;
+        background-color: #302e2e80;
+        /* z-index: 10; */
     }
 }
 
