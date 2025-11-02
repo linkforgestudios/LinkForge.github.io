@@ -154,6 +154,12 @@ main {
         /* optional: gives consistent header height */
     }
 
+    /* Center navbar items */
+    .navbar-nav {
+        text-align: center;
+        background-color: #302e2e80;
+    }
+
     /* Optional — makes cards expand naturally on smaller screens */
     @media (max-width: 767px) {
         .card-fixed {
@@ -313,13 +319,6 @@ footer {
     .card {
         width: 90% !important;
     }
-
-    /* Center navbar items */
-    .navbar-nav {
-        text-align: center;
-        background-color: #302e2e80;
-        /* z-index: 10; */
-    }
 }
 
 /* ---------------- Company Summary ---------------- */
@@ -435,8 +434,46 @@ footer {
     z-index: 1;
 }
 
-/* Banner content overlays video */
+/* Removes all spacing between video and image */
 .banner-content {
+    margin: 0;
+    padding: 0;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 600px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* keeps image proportional within fixed area */
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+
+.text-overlay h6 {
+    color: #eac115;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* .banner-content {
     position: absolute;
     top: 0;
     left: 0;
@@ -444,9 +481,7 @@ footer {
     height: 100%;
     object-fit: cover;
     z-index: 2;
-}
-
-/* Image positioned absolutely inside content */
+} 
 .overlay-image {
     position: absolute;
     top: 0;
@@ -468,9 +503,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* or center if you want it centered */
     padding: 1rem;
-
-    /* Make sure text scales gracefully */
     text-align: left;
 }
+    */
