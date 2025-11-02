@@ -206,10 +206,17 @@ a:hover {
 footer {
     background-color: #181818;
     text-align: center;
-    padding: 20px;
     color: white;
     margin-top: auto;
-    /* This pushes it to the bottom */
+    padding: 1em 0;
+    margin: 0;
+}
+
+footer p {
+    margin: 1em;
+    /* remove default paragraph margin */
+    line-height: 1.4;
+    /* keep nice vertical rhythm */
 }
 
 /* Custom modal colors */
