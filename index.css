@@ -234,9 +234,34 @@ footer p {
     /* subtle border */
 }
 
+.modal-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .custom-modal .modal-footer {
     border-top: 1px solid #333;
     /* subtle border */
+}
+
+.modal-content {
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(234, 193, 21, 0.2);
+}
+
+.modal-body label {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form-control:focus {
+    border-color: #eac115;
+    box-shadow: 0 0 5px rgba(234, 193, 21, 0.3);
+}
+
+#contactModal .modal-body {
+    text-align: left;
+
 }
 
 /* ---------------- Other Sections ---------------- */
