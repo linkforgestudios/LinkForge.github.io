@@ -277,19 +277,25 @@ footer p {
     border-radius: 10px;
     overflow: hidden;
     background-color: black;
-    /* ensures letterbox areas are black */
     position: relative;
+
+    /* Maintain a fixed aspect ratio (e.g., 21:9 cinematic ratio) */
+    aspect-ratio: 21 / 9;
+    /* you can change this to 16 / 9 or 4 / 3 if preferred */
 }
 
-/* Banner image: keep entire image visible */
+/* Banner image: keep entire image visible, no cropping */
 #featuredGameBanner img.card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* keeps full image visible */
+    /* ensures full image visible */
     object-position: center;
-    /* center the image in the container */
 }
+
 
 /* Overlay buttons centered */
 #featuredGameBanner .card-img-overlay {
