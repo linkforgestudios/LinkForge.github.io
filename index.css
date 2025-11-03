@@ -279,11 +279,11 @@ footer p {
     background-color: black;
     position: relative;
 
-    /* Maintain fixed aspect ratio */
-    aspect-ratio: 21 / 9;
+    /* Keep the banner’s natural 1290x400 shape */
+    aspect-ratio: 1290 / 400;
 }
 
-/* Keep full image visible without stretching or cropping */
+/* Center image, never crop or stretch */
 #featuredGameBanner .banner-image-wrapper {
     position: relative;
     width: 100%;
@@ -291,6 +291,8 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    /* fills letterbox space */
 }
 
 #featuredGameBanner img.card-img {
@@ -299,17 +301,13 @@ footer p {
     width: auto;
     height: auto;
     object-fit: contain;
-    /* never crops */
     border-radius: 10px;
 }
 
-/* Overlay buttons centered */
+/* Overlay styling preserved */
 #featuredGameBanner .card-img-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
