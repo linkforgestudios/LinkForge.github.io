@@ -324,18 +324,47 @@ footer p {
     white-space: nowrap;
 }
 
-/* Mobile adjustments */
+/* ===== Mobile adjustments ===== */
 @media (max-width: 768px) {
+
+    /* Maintain visibility of full image */
+    #featuredGameBanner {
+        aspect-ratio: auto;
+        height: auto;
+    }
+
+    #featuredGameBanner .banner-image-wrapper {
+        height: auto;
+    }
+
     #featuredGameBanner img.card-img {
-        height: 250px;
         width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Remove overlay on mobile */
+    #featuredGameBanner .card-img-overlay {
+        position: static;
+        background: none;
+        padding: 0.5em 0;
+    }
+
+    /* Stack buttons below image */
+    #featuredGameBanner .card-img-overlay .d-flex {
+        flex-direction: column;
+        gap: 0.75em;
+        align-items: center;
+        margin-top: 0.5em;
     }
 
     #featuredGameBanner .card-img-overlay .btn {
-        width: 80%;
-        font-size: 0.9rem;
+        width: 90%;
+        font-size: 1rem;
+        padding: 0.8em 1em;
     }
 }
+
 
 
 /* ===== Game Cards Section ===== */
