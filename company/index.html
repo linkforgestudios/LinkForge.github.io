@@ -189,40 +189,55 @@
             </div>
         </div>
         <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content" style="background-color: #181818; color: white; border: 1px solid white;">
-                    <div class="modal-header" style="border-bottom: 1px solid white;">
-                        <h5 class="modal-title" id="contactModalLabel" style="color: white;">Contact Us</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="background-color: #1a1a1a; color: white;">
+
+                    <div class="modal-header border-0 flex-column align-items-center">
+                        <h5 class="modal-title text-center mb-3" id="contactModalLabel" style="color: white;">
+                            Contact Us
+                        </h5>
+                        <hr style="width: 100%;margin: 0;">
                     </div>
 
-                    <div class="modal-body">
-                        <form id="contact-form">
-                            <div class="mb-3">
-                                <label for="name" class="col-form-label">Name:</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name"
-                                    required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="col-form-label">Email:</label>
-                                <input type="email" class="form-control" id="email" name="email"
-                                    placeholder="Your email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="col-form-label">Message:</label>
-                                <textarea class="form-control" id="message" name="message" rows="4"
-                                    placeholder="Your message..." required></textarea>
-                            </div>
-                            <hr style="padding-top: 5px; padding-bottom: 5px;">
-                            <button type="submit" class="btn w-100"
-                                style="background-color: white; color: #181818; font-weight: bold;">Send
-                                Message</button>
-                        </form>
+                    <!-- Body -->
+                    <form id="contact-form" class="px-3">
+                        <div class="mb-3">
+                            <label for="name" class="form-label" style="color: white;">Full Name</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" id="name"
+                                name="name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label" style="color: white;">Email Address</label>
+                            <input type="email" class="form-control bg-dark text-white border-secondary" id="email"
+                                name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label" style="color: white;">Message</label>
+                            <textarea class="form-control bg-dark text-white border-secondary" id="message"
+                                name="message" rows="4" required></textarea>
+                        </div>
+                    </form>
+
+                    <hr style="margin-top: 0;margin-bottom: 0;">
+                    <!-- Footer -->
+                    <div class="modal-footer border-0 justify-content-center w-100">
+                        <div class="d-flex w-100 gap-2">
+                            <button type="submit" form="contact-form" class="btn btn-light text-dark fw-semibold"
+                                style="width: 75%;">
+                                Send Message
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width: 25%;">
+                                Close
+                            </button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
+
         <!-- EmailJS -->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script>
@@ -232,15 +247,14 @@
 
             document.getElementById("contact-form").addEventListener("submit", function (event) {
                 event.preventDefault();
-
-                emailjs.sendForm("service_pevr3w7", "template_z7wcp88", this)
+                emailjs.sendForm('service_pevr3w7', 'template_z7wcp88', this)
                     .then(() => {
                         alert("✅ Your message has been sent successfully!");
                         this.reset();
                         const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
                         modal.hide();
                     })
-                    .catch(error => {
+                    .catch((error) => {
                         console.error("EmailJS error:", error);
                         alert("❌ There was an issue sending your message. Please try again.");
                     });
