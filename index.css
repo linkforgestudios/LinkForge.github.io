@@ -279,41 +279,46 @@ footer p {
     background-color: black;
     position: relative;
 
-    /* Maintain a fixed aspect ratio (e.g., 21:9 cinematic ratio) */
+    /* Maintain fixed aspect ratio */
     aspect-ratio: 21 / 9;
-    /* you can change this to 16 / 9 or 4 / 3 if preferred */
 }
 
-/* Banner image: keep entire image visible, no cropping */
+/* Keep full image visible without stretching or cropping */
+#featuredGameBanner .banner-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #featuredGameBanner img.card-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* never crops */
+    border-radius: 10px;
+}
+
+/* Overlay buttons centered */
+#featuredGameBanner .card-img-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    /* ensures full image visible */
-    object-position: center;
-}
-
-
-/* Overlay buttons centered */
-#featuredGameBanner .card-img-overlay {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     text-align: center;
     padding: 1em;
-    position: absolute;
-    /* overlay stays above image */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
-    /* optional gradient */
 }
+
 
 /* Overlay buttons styling */
 #featuredGameBanner .card-img-overlay .btn {
