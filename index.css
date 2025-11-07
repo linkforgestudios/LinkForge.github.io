@@ -229,6 +229,26 @@ footer p {
     /* optional rounded corners */
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    gap: 20px;
+    /* consistent space between icons */
+    margin: 0;
+    padding: 0;
+}
+
+.social-icon {
+    height: 40px;
+    width: 40px;
+    /* fixed square area */
+    object-fit: contain;
+    /* keeps aspect ratio inside the box */
+}
+
+
 .custom-modal .modal-header {
     border-bottom: 1px solid #333;
     /* subtle border */
