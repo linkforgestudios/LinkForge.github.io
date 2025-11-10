@@ -345,7 +345,6 @@ footer p {
     #featuredGameBanner {
         aspect-ratio: auto;
         height: auto;
-        background-image: url("/Images/Saki_Game_Banner_Cropped.png");
     }
 
     #featuredGameBanner .banner-image-wrapper {
