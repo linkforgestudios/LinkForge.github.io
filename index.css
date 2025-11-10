@@ -296,11 +296,11 @@ footer p {
     max-width: 90%;
     border-radius: 10px;
     overflow: hidden;
-    background-color: black;
+    background-color: transparent;
     position: relative;
 
     /* Keep the banner’s natural 1290x400 shape */
-    aspect-ratio: 1290 / 400;
+    aspect-ratio: 1340 / 482;
 }
 
 /* Center image, never crop or stretch */
