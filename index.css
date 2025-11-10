@@ -303,10 +303,6 @@ footer p {
     aspect-ratio: 1340 / 482;
 }
 
-#featuredGameBanner * {
-    background: none !important;
-}
-
 /* Center image, never crop or stretch */
 #featuredGameBanner .banner-image-wrapper {
     position: relative;
