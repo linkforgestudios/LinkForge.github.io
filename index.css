@@ -294,8 +294,6 @@ footer p {
 #featuredGameBanner {
     margin: 2em auto;
     max-width: 90%;
-    border-radius: 10px;
-    overflow: hidden;
     background-color: transparent;
     position: relative;
 
