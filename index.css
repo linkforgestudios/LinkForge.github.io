@@ -292,8 +292,6 @@ footer p {
 
 /* Featured Game Banner */
 #featuredGameBanner {
-    margin: 2em auto;
-    max-width: 90%;
     background-color: transparent;
     position: relative;
 
